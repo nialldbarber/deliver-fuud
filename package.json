@@ -1,0 +1,48 @@
+{
+  "name": "deliver-fuud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server -d"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-root-import": "^6.4.1",
+    "babel-plugin-ts-optchain": "^1.1.5",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "vue-loader": "^15.9.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^0.4.0",
+    "style-loader": "^1.1.3",
+    "vue": "^2.6.11",
+    "vue-function-api": "^3.0.0-beta.0",
+    "vue-hooks": "^0.3.2",
+    "vue-router": "^3.1.6",
+    "vue-svg-loader": "^0.16.0",
+    "vuex": "^3.1.2"
+  },
+  "author": "Niall Barber",
+  "license": "ISC"
+}
