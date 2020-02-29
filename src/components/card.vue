@@ -1,17 +1,20 @@
 <template>
   <div class="card">
     <p class="store">
-      <Skeleton v-if="loading" width="100px" height="80px" />
+      <Skeleton v-if="loading" width="100%" height="20px" />
       <slot v-else name="store" />
     </p>
     <p class="location">
-      <slot name="location" />
+      <Skeleton v-if="loading" width="100%" height="20px" />
+      <slot v-else name="location" />
     </p>
     <p class="type">
-      <slot name="type" />
+      <Skeleton v-if="loading" width="100%" height="20px" />
+      <slot v-else name="type" />
     </p>
     <div class="logo">
-      <slot name="logo" />
+      <Skeleton v-if="loading" width="80%" height="100px" />
+      <slot v-else name="logo" />
     </div>
   </div>
 </template>

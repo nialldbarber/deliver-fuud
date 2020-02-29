@@ -36,7 +36,8 @@ export default {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  background-color: #dddbdd;
+  background-color: #efeeef;
+  border-radius: 3px;
   overflow: hidden;
 
   &:after {
@@ -48,7 +49,7 @@ export default {
     right: 0;
     transform: translateX(-100%);
     background-image: linear-gradient(90deg, rgba(#fff, 0) 0, rgba(#fff, 0.2) 20%, rgba(#fff, 0.5) 60%, rgba(#fff, 0));
-    animation: shimmer 5s infinite;
+    animation: shimmer 1.5s infinite;
   }
 }
 
