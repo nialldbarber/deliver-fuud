@@ -3,7 +3,6 @@
     <router-link to="/">
       <h1>Deliver Füüd</h1>
     </router-link>
-    <v-row>Hello</v-row>
   </div>
 </template>
 

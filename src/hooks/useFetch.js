@@ -1,23 +1,22 @@
 import { reactive } from '@vue/composition-api'
 
-export function useFetchApi(api, item) {
+export function useFetchApi(api) {
   const state = reactive({
     data: [],
+    loading: false,
+    error: false,
   })
 
   async function fetchData() {
+    state.loading = true
     try {
-      if (item) {
-        const response = await fetch(api).then((res) => res.json()).then(data => {
-          state.data = response
-        })
-      } else {
-        const response = await fetch(api).then((res) => res.json())
-        console.log(response)
-        state.data = response
-      }
+      const response = await fetch(api).then((res) => res.json())
+      state.data = response
+      state.loading = false
     } catch (err) {
       console.log(err)
+      state.error = true
+      state.loading = false
     }
   }
 

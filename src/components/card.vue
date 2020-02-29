@@ -1,17 +1,32 @@
 <template>
   <div class="card">
-    <p class="store">{{ store.store }}</p>
-    <p class="location">{{ store.location }}</p>
-    <p class="type">{{ store.type }}</p>
-    <img class="logo" :src="store.logo" alt="Logo" />
+    <p class="store">
+      <Skeleton v-if="loading" width="100px" height="80px" />
+      <slot v-else name="store" />
+    </p>
+    <p class="location">
+      <slot name="location" />
+    </p>
+    <p class="type">
+      <slot name="type" />
+    </p>
+    <div class="logo">
+      <slot name="logo" />
+    </div>
   </div>
 </template>
 
 <script>
+import Skeleton from '~/components/skeleton.vue'
+
 export default {
   name: 'Card',
+  components: {
+    Skeleton,
+  },
   props: {
     store: Object,
+    loading: Boolean,
   },
 }
 </script>
